@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(17, 72, 90);
+}
+
+.busqueda {
+    width: 1000px;
+    margin: 30px auto;
+    background: white;
+}
+
+.menu>li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu ul {
+    list-style: none
+}
+
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: midnightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: blue;
+    transition: all .3s;
+}
+
+.submenu {
+    position: absolute;
+    background: #333333;
+    width: 120%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s
+}
+
+.submenu li a {
+    padding: 15px;
+    display: block;
+    color: #afffff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.imag :hover {
+    background: gold;
+    visibility: visible;
+    opacity: 1;
+}
+
+.imagen :hover {
+    background: gold;
+    visibility: visible;
+    opacity: 1;
+}
+
+.columna {
+    width: 1200px;
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.columna .bloques {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.columna .bloques .caja {
+    position: relative;
+    overflow: hidden;
+}
+
+.columna .bloques .caja img {
+    max-width: 100%;
+    transition: transform 2s;
+}
+
+.colomna .bloques:hover .caja img {
+    transform: "scale(1.2)";
+}
+
+.columna .bloques .detalles {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, .8);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+
+.columna .bloques:hover .detalles {
+    transform: scaleY(1);
+}
+
+.columna .bloques .detalles .contenido {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+
+.columna .bloques .detalles .contenido h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #ff0;
+}
+
+.columna .bloques .detalles .contenido p {
+    margin: 10px 0 0;
+    padding: 0;
+}
